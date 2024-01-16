@@ -23,6 +23,7 @@ namespace Diamond
             //Console.WriteLine(y);
 
             //_______Tulostetaan ensin timantin yläosa ________________________________________________
+            //____Tulostuksessa välilyöntien määrä vähenee ja (*) merkkien määrä lisääntyy_____________
 
             for (int i = 0; i < n; i++)     //for-luuppi käy läpi luvut (0->n), n=yläosan rivien määrä
             {   
@@ -37,34 +38,35 @@ namespace Diamond
 
                     Console.Write("*");    //(*) merkin tulostus
                 }
-                     y = y + 2;         //kun lisätään (y):tä aina kahdella, saadaan aina kaksi merkkiä lisää
+                     y = y + 2;        //kun lisätään (y):tä aina kahdella, saadaan luupissa aina kaksi merkkiä lisää
 
                 Console.WriteLine();   //tässä siirrytään seuraavalle riville
             }
 
             //______Sitten tulostetaan timantin alaosa______________________________________________________
+            //____Tulostuksessa välilyöntien määrä lisääntyy ja (*) merkkien määrä vähenee__________________
 
             y = y - 2;  //vähennetään (y):stä ylimääräiset 2, joka lisättin yläosan tulostuksen jälkeen.
             y = y - 2;  //vähennetään myös ylimääriset 2, koska alaosan yläosassa on kaksi tähteä vähemmän
                             //kuin yläosan alaosassa.
            
-            n = n - 1;
+            n = n - 1;     //vähennetään rivien määrää yhdellä, koska alaosassa on yksi rivi vähemmän
             m = n;
             for (int i = 0; i < n; i++)
             { 
-                m = m + 1;
+                m = m + 1;    //(m) vaikuttaa välilyöntien määrään, jotka lisääntyvät, kun mennään alaspäin
 
-                for (int z = n; z <= m; z++) { Console.Write(" "); }
+                for (int z = n; z <= m; z++) //tulostetaan välilyönnit for-luupin avulla
+                { Console.Write(" "); }
                
-
-
-                for (int j = 0; j <= y; j++)
+                for (int j = 0; j <= y; j++) //tulostetaan (*) merkit for-luupissa.
                 {
-                    Console.Write("*");
+                    Console.Write("*");     //(*) merkin tulostus
                 }
-                y = y - 2;
+                y = y - 2;          //(y) vaikuttaa tulostettavien merkkien määrään, joita on aina
+                                        //2 vähemmän, kun mennään kohti timantin alakärkeä.
 
-                Console.WriteLine();
+                Console.WriteLine();   //tässä siirrytään seuraavalle riville
             }
 
 
