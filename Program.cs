@@ -25,13 +25,13 @@ namespace Diamond
             //_______Tulostetaan ensin timantin yläosa ________________________________________________
             //____Tulostuksessa välilyöntien määrä vähenee ja (*) merkkien määrä lisääntyy_____________
 
-            for (int i = 0; i < n; i++)     //for-luuppi käy läpi luvut (0->n), n=yläosan rivien määrä
+            for (int i = 0; i < n; i++)     //for-luuppi käy läpi luvut (0->n), (n)=yläosan rivien määrä
             {   
                      for(int z=m; z>0; z--)    //Tulostetaan jokaisen rivin alkuun riittävä määrä väilyöntejä
                      { Console.Write(" "); }   //for-luupin, apumuuttujan (m) ja kierrosmuttujan (z) avulla
 
                          m = m - 1;          //kun (m) pienenee, niin jokaisen rivin alkuun tulee yksi vähemmän
-                                            //välilyötejä, kun mennään timantin kesikohtaa kohti
+                                            //välilyötejä, kun mennään timantin keskikohtaa kohti
                 
                 for (int j=0; j <= y; j++)  //tämä for-luuppi tulostaa (*) merkit. Ensimmäiselle riville tulee
                 {                           //yksi merkki ja sitä seuraaville riveille aina kaksi merkkiä lisää
@@ -52,7 +52,7 @@ namespace Diamond
            
             n = n - 1;     //vähennetään rivien määrää yhdellä, koska alaosassa on yksi rivi vähemmän
             m = n;
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)   //for-luuppi käy läpi luvut (0->n), (n)=alaosan rivien määrä
             { 
                 m = m + 1;    //(m) vaikuttaa välilyöntien määrään, jotka lisääntyvät, kun mennään alaspäin
 
